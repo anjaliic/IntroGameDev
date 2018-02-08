@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 413850652}
   - component: {fileID: 413850655}
   - component: {fileID: 413850656}
+  - component: {fileID: 413850654}
   m_Layer: 0
   m_Name: armor2
   m_TagString: armor
@@ -452,6 +453,17 @@ Transform:
   m_Father: {fileID: 534868828}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &413850654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413850651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152b4842e6a93394885a5dc259468a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &413850655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -598,7 +610,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 534868828}
-  - component: {fileID: 534868829}
   m_Layer: 0
   m_Name: choiceArmor
   m_TagString: Untagged
@@ -621,24 +632,6 @@ Transform:
   m_Father: {fileID: 2133219160}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534868829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534868827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab16ad35fb07e1f42814bd8f61023efd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choiceArmor: 0
-  armor1: 0
-  armor2: 0
-  choiceSteed: 0
-  steed1: 0
-  steed2: 0
-  steed3: 0
 --- !u!1 &553751674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1205,7 @@ GameObject:
   - component: {fileID: 1500661766}
   - component: {fileID: 1500661769}
   - component: {fileID: 1500661768}
+  - component: {fileID: 1500661770}
   m_Layer: 0
   m_Name: armor1
   m_TagString: armor
@@ -1321,6 +1315,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1500661770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500661765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152b4842e6a93394885a5dc259468a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584338479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1672,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2133219160}
+  - component: {fileID: 2133219159}
   m_Layer: 0
   m_Name: allChoices
   m_TagString: Untagged
@@ -1674,6 +1680,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2133219159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133219158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16ad35fb07e1f42814bd8f61023efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choiceArmor: 0
+  armor1: 0
+  armor2: 0
+  choiceSteed: 0
+  steed1: 0
+  steed2: 0
+  steed3: 0
 --- !u!4 &2133219160
 Transform:
   m_ObjectHideFlags: 0

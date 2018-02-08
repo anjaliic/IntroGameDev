@@ -25,56 +25,36 @@ public class playerChoices : MonoBehaviour {
 
 	void Update()
 	{
-//		if (choiceArmor == true && gameObject.tag.Equals ("armor1")) 
-//			{
-//			Destroy (gameObject);
-//			}
-//		if (armor1 == true || armor2 == true)
-//		{
-//			choiceArmor = true;
-//		}
-
-//		switch (armor)
-//		{
-//		case 1:
-//			armor1 = true;
-//			break;
-//
-//		case 2:
-//			armor2 = true;
-//			break;
-//		}
 
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		armorChoice ();
-
+//		armorChoice ();
 		steedChoice ();
 	}
 
-	void armorChoice ()
-	{
-		if (choiceArmor == false)
-		{
-			gameObject.SetActive (false);
-
-			if (this.gameObject.name.Equals ("armor1")) 
-			{
-				armor1 = true;
-				Debug.Log ("armor 1 = true");
-//				armor = 1;
-			}
-			if (this.gameObject.name.Equals ("armor2")) 
-			{
-				armor2 = true;
-				Debug.Log ("armor2 = true");
-//				armor = 2;
-			}
-			choiceArmor = true;
-		}
-	}
+//	void armorChoice ()
+//	{
+//		if (choiceArmor == false)
+//		{
+//			gameObject.SetActive (false);
+//
+//			if (this.gameObject.name.Equals ("armor1")) 
+//			{
+//				armor1 = true;
+//				Debug.Log ("armor 1 = true");
+////				armor = 1;
+//			}
+//			if (this.gameObject.name.Equals ("armor2")) 
+//			{
+//				armor2 = true;
+//				Debug.Log ("armor2 = true");
+////				armor = 2;
+//			}
+//			choiceArmor = true;
+//		}
+//	}
 
 	void steedChoice ()
 	{

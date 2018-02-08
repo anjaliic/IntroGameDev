@@ -65,8 +65,8 @@ public class playerController : MonoBehaviour {
 
 	void playerArmor ()
 	{
-//		if (playerChoices.Choice.choiceArmor.Equals (true))
-//		{
+		if (playerChoices.Choice.choiceArmor.Equals (true))
+		{
 			if (playerChoices.Choice.armor1.Equals (true))
 			{
 				Debug.Log ("player = armor1");
@@ -78,6 +78,6 @@ public class playerController : MonoBehaviour {
 				Debug.Log ("player = armor2");
 				spriteRend.sprite = playerarmor2;
 			}
-//		}
+		}
 	}
 }
