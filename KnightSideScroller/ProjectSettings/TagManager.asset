@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - color
-  - redarmor
-  - bluearmor
-  - armor1
-  - armor2
   - armor
+  - stat
   layers:
   - Default
   - TransparentFX
@@ -44,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 2507952497
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: interface
+    uniqueID: 1508999355
     locked: 0
