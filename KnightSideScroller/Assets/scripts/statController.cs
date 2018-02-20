@@ -6,25 +6,44 @@ public class statController : MonoBehaviour {
 
 	public static statController statCtrl;
 
-	//player stats
-	public float speedStat = 1f; 
-	public float strengthStat;
-	public float skillStat;
-	public float coinStat;
+	public Sprite statMax;
+	public Sprite stat1;
 
-	// Use this for initialization
-	void Start ()
+	public SpriteRenderer statRend;
+	public Transform statT;
+
+	float statYpos;
+	float statYscale;
+
+	void Start()
 	{
 		statCtrl = this;
-		GetComponentInChildren<Transform> ();
+		statT = GetComponent<Transform> ();
+		statRend = GetComponent<SpriteRenderer> ();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		foreach (Transform child in transform) 
-		{
 
+	void Update()
+	{
+		StatIntro ();
+
+		if (statManager.statMng.statReset == true) {
+			statRend.sprite = stat1;
+		}
+}
+
+	void StatIntro ()
+	{
+		if (this.gameObject.name.Equals ("speedBar") && statManager.statMng.speedBool == true) {
+			statRend.sprite = statMax;
+		}
+		if (this.gameObject.name.Equals ("strengthBar") && statManager.statMng.strengthBool == true) {
+			statRend.sprite = statMax;
+		}
+		if (this.gameObject.name.Equals ("skillBar") && statManager.statMng.skillBool == true) {
+			statRend.sprite = statMax;
+		}
+		if (this.gameObject.name.Equals ("coinBar") && statManager.statMng.coinBool == true) {
+			statRend.sprite = statMax;
 		}
 	}
 }

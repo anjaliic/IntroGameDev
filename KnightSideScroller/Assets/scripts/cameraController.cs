@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class cameraController : MonoBehaviour {
 
+	public GameObject Player;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+	public float speed = 2.0f;
+
+	void Start()
 	{
-//		this.transform.position = new Vector3 (playerController.playerCtrl.xpos, 0f, 0f);	
+		Player = GameObject.FindWithTag ("Player");
 	}
+
+	void Update () {
+
+		float interpolation = speed * Time.deltaTime;
+
+		Vector3 position = this.transform.position;
+	
+		position.x = Mathf.Lerp (this.transform.position.x, Player.transform.position.x, interpolation);
+
+		this.transform.position = position;
+	}
+
+
 }

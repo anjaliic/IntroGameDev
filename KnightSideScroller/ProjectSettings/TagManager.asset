@@ -6,6 +6,8 @@ TagManager:
   tags:
   - armor
   - stat
+  - narration
+  - n_intro
   layers:
   - Default
   - TransparentFX
@@ -40,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: areas
+    uniqueID: 3319151407
+    locked: 0
   - name: bg
     uniqueID: 2507952497
     locked: 0
@@ -48,4 +53,7 @@ TagManager:
     locked: 0
   - name: interface
     uniqueID: 1508999355
+    locked: 0
+  - name: labels
+    uniqueID: 2372903727
     locked: 0
