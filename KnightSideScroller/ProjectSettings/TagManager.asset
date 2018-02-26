@@ -9,6 +9,8 @@ TagManager:
   - narration
   - n_intro
   - item_1
+  - convo
+  - search
   layers:
   - Default
   - TransparentFX

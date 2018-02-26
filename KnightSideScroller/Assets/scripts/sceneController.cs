@@ -7,11 +7,15 @@ public class sceneController : MonoBehaviour {
 
 	Scene start;
 	Scene scene_2;
+	Scene scene_3fr;
+	Scene scene_3mt;
 
 	void Start()
 	{
 		start = SceneManager.GetSceneByName ("game_start");
 		scene_2 = SceneManager.GetSceneByName ("scene_2");
+		scene_3fr = SceneManager.GetSceneByName ("scene_3_forest");
+		scene_3mt = SceneManager.GetSceneByName ("scene_3_mt");
 	}
 	void OnTriggerEnter2D(Collider2D player){
 
@@ -23,7 +27,16 @@ public class sceneController : MonoBehaviour {
 
 		if (this.gameObject.name == ("ST_2"))
 		{
-
+			if (gameManager.gameMng.search1 == true)
+			{
+				SceneManager.LoadScene ("scene_3_forest", LoadSceneMode.Single);
+				SceneManager.SetActiveScene (scene_3fr);
+			}
+			if (gameManager.gameMng.search2 == true)
+			{
+				SceneManager.LoadScene ("scene_3_mt", LoadSceneMode.Single);
+				SceneManager.SetActiveScene (scene_3mt);
+			}
 		}
 
 	}

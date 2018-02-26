@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40211161}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -24, y: 10, z: 0}
+  m_LocalPosition: {x: -29.3, y: 10, z: 0}
   m_LocalScale: {x: 0.5, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 246198224}
@@ -304,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 79752688}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -24, y: 10.8, z: 0.11929417}
+  m_LocalPosition: {x: -29.3, y: 10.8, z: 0.11929417}
   m_LocalScale: {x: 0.5, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 246198224}
@@ -929,6 +929,9 @@ MonoBehaviour:
   item1: 0
   item2: 0
   item3: 0
+  choiceSearch: 0
+  search1: 0
+  search2: 0
 --- !u!4 &388455065
 Transform:
   m_ObjectHideFlags: 0
@@ -1681,6 +1684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invis: {fileID: 0}
   visible: {fileID: 21300000, guid: 17ad8240fa988804bb8e00a5d7ca9293, type: 3}
+  d2: {fileID: 0}
+  d3: {fileID: 0}
 --- !u!1 &570277272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,7 +2493,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211249500}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -24, y: 9.2, z: 0.11929417}
+  m_LocalPosition: {x: -29.3, y: 9.2, z: 0.11929417}
   m_LocalScale: {x: 0.5, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 246198224}
@@ -2565,9 +2570,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1256378497}
   - component: {fileID: 1256378495}
-  - component: {fileID: 1256378494}
   - component: {fileID: 1256378493}
   - component: {fileID: 1256378496}
+  - component: {fileID: 1256378494}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2610,11 +2615,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 12.42
+  m_UseAutoMass: 0
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2638,7 +2643,7 @@ MonoBehaviour:
   spriteRend: {fileID: 0}
   jumpSpeed: 8
   playerSpeed: 30
-  speed: {x: 10, y: 10}
+  isFalling: 0
 --- !u!212 &1256378496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2988,7 +2993,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1787014799
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 29cfe96a0efb0d0408c15172cfcecee5, type: 3}
   m_Color: {r: 0.8455882, g: 0.94888437, b: 1, a: 1}

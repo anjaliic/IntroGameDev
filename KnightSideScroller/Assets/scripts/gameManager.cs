@@ -33,6 +33,12 @@ public class gameManager : MonoBehaviour {
 	public bool item2;
 	public bool item3;
 
+	//search location choice
+	public bool choiceSearch;
+
+	public bool search1;
+	public bool search2;
+
 	void Start()
 	{
 		gameMng = this;

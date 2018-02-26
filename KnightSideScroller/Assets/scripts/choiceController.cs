@@ -17,6 +17,8 @@ public class choiceController : MonoBehaviour {
 		armorChoice ();
 
 		Item_1Choice ();
+
+		searchChoice ();
 	}
 
 	void armorChoice ()
@@ -59,6 +61,23 @@ public class choiceController : MonoBehaviour {
 				gameManager.gameMng.wealth++;
 			}
 			gameManager.gameMng.choiceItem = true;
+		}
+	}
+
+	void searchChoice ()
+	{
+		if (gameManager.gameMng.choiceSearch == false && this.gameObject.tag.Equals ("search")) 
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name.Equals ("search1"))
+			{
+				gameManager.gameMng.search1 = true;
+			}
+			if (this.gameObject.name.Equals ("search2")) 
+			{
+				gameManager.gameMng.search2 = true;
+			}
+			gameManager.gameMng.choiceSearch = true;
 		}
 	}
 }
