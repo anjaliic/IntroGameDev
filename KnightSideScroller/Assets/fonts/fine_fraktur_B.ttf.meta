@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9b380b0c14dcc6e409eb768279376780
+timeCreated: 1522042886
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: fin fraktur
+  fontNames:
+  - fin fraktur
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

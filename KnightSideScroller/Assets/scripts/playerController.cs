@@ -6,6 +6,20 @@ public class playerController : MonoBehaviour {
 
 	public static playerController playerCtrl;
 
+//	public AnimationClip silveridle;
+//	public AnimationClip silverwalk;
+//
+//	public AnimationClip rougeidle;
+//	public AnimationClip rougewalk;
+//
+//	public AnimationClip keppelidle;
+//	public AnimationClip keppelwalk;
+//
+//	Animation playerAnim;
+//
+//	AnimationClip playerWalk;
+//	AnimationClip playerIdle;
+
 	AudioSource walkAudio;
 
 //	public GameObject Player;
@@ -27,8 +41,13 @@ public class playerController : MonoBehaviour {
 
 	void Start()
 	{
+//		playerAnim = GetComponent<Animation> ();
+
 		walkAudio = GetComponent<AudioSource> ();
-		
+
+//		playerIdle = silveridle;
+//		playerWalk = silverwalk;
+
 		playerCtrl = this;
 
 		playerRB = GetComponent<Rigidbody2D> ();
@@ -44,9 +63,15 @@ public class playerController : MonoBehaviour {
 
 	void Update () 
 	{	
+//		playerAnim.Equals(playerIdle);
 		//movement controls
 		PlayerWalk ();
 		PlayerJump ();
+
+		if (isWalking == true) 
+		{
+//			playerAnim.Equals (playerWalk);
+		}
 
 		playerArmor ();	//choice1
 	}
@@ -57,13 +82,12 @@ public class playerController : MonoBehaviour {
 		{
 			isWalking = true;
 			transform.position += transform.right * playerSpeed * Time.deltaTime;
-		}
-		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) 
-		{
+		} 
+		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 			isWalking = true;
 			transform.position += transform.right * -playerSpeed * Time.deltaTime;
-		}
-		else
+		} 
+		if (!Input.GetKey (KeyCode.D) && !Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.LeftArrow))
 		{
 			isWalking = false;
 		}
@@ -87,12 +111,14 @@ public class playerController : MonoBehaviour {
 			{
 				Debug.Log ("player = armor1");
 				spriteRend.sprite = playerarmor1;
+				gameManager.gameMng.choiceArmor.Equals (false);
 			}
 
 			if (gameManager.gameMng.armor2.Equals (true))
 			{
 				Debug.Log ("player = armor2");
 				spriteRend.sprite = playerarmor2;
+				gameManager.gameMng.choiceArmor.Equals (false);
 			}
 		}
 	}
