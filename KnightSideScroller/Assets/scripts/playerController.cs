@@ -6,6 +6,8 @@ public class playerController : MonoBehaviour {
 
 	public static playerController playerCtrl;
 
+	AudioSource walkAudio;
+
 //	public GameObject Player;
 
 	public Rigidbody2D playerRB;
@@ -20,10 +22,13 @@ public class playerController : MonoBehaviour {
 
 	public float playerSpeed;
 
+	public bool isWalking;
 	public bool isFalling;
 
 	void Start()
 	{
+		walkAudio = GetComponent<AudioSource> ();
+		
 		playerCtrl = this;
 
 		playerRB = GetComponent<Rigidbody2D> ();
@@ -50,11 +55,17 @@ public class playerController : MonoBehaviour {
 	{
 		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow))
 		{
+			isWalking = true;
 			transform.position += transform.right * playerSpeed * Time.deltaTime;
 		}
 		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) 
 		{
+			isWalking = true;
 			transform.position += transform.right * -playerSpeed * Time.deltaTime;
+		}
+		else
+		{
+			isWalking = false;
 		}
 	}
 

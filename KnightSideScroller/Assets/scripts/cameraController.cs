@@ -6,7 +6,7 @@ public class cameraController : MonoBehaviour {
 
 	public GameObject Player;
 
-	public float speed = 2.0f;
+	public float speed;
 
 	void Start()
 	{

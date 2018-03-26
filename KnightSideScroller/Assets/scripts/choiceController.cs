@@ -16,7 +16,7 @@ public class choiceController : MonoBehaviour {
 	{
 		armorChoice ();
 
-		Item_1Choice ();
+		StarterGold ();
 
 		searchChoice ();
 	}
@@ -40,27 +40,16 @@ public class choiceController : MonoBehaviour {
 		}
 	}
 
-	void Item_1Choice ()
+	void StarterGold ()
 	{
-		if (gameManager.gameMng.choiceItem == false && this.gameObject.tag.Equals ("item_1")) 
+		if (this.gameObject.tag.Equals ("gold")) 
 		{
 			this.gameObject.SetActive (false);
-			if (this.gameObject.name.Equals ("item1")) 
+			if (this.gameObject.name.Equals ("startergold")) 
 			{
-				gameManager.gameMng.item1 = true;
-				gameManager.gameMng.strength++;
-			}
-			if (this.gameObject.name.Equals ("item2")) 
-			{
-				gameManager.gameMng.item2 = true;
-				gameManager.gameMng.cunning++;
-			}
-			if (this.gameObject.name.Equals ("item3")) 
-			{
-				gameManager.gameMng.item3 = true;
 				gameManager.gameMng.wealth++;
 			}
-			gameManager.gameMng.choiceItem = true;
+			gameManager.gameMng.starterGold = true;
 		}
 	}
 

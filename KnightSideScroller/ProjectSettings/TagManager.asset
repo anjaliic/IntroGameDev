@@ -11,6 +11,7 @@ TagManager:
   - item_1
   - convo
   - search
+  - gold
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: bg
     uniqueID: 2507952497
+    locked: 0
+  - name: ground
+    uniqueID: 1246199169
     locked: 0
   - name: npc
     uniqueID: 4066047103

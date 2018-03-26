@@ -6,6 +6,12 @@ public class gameManager : MonoBehaviour {
 
 	public static gameManager gameMng;
 
+	public Font narrateFont;
+
+//	//global player controls
+//	public float playerSpeedCtrl;
+//	public float jumpSpeedCtrl;
+
 	//armor choice
 	public bool choiceArmor;
 
@@ -26,18 +32,13 @@ public class gameManager : MonoBehaviour {
 	public int wealth;
 	public int rep;
 
-	//item choice
-	public bool choiceItem;
-
-	public bool item1;
-	public bool item2;
-	public bool item3;
-
 	//search location choice
 	public bool choiceSearch;
 
 	public bool search1;
 	public bool search2;
+
+	public bool starterGold;
 
 	void Start()
 	{

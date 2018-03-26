@@ -131,16 +131,16 @@ public class statController : MonoBehaviour {
 			if (gameManager.gameMng.rep == 1) {
 				statRend.sprite = stat1;
 			}
-			if (gameManager.gameMng.wealth == 1) {
+			if (gameManager.gameMng.rep == 1) {
 				statRend.sprite = stat1;
 			}
-			if (gameManager.gameMng.wealth == 2) {
+			if (gameManager.gameMng.rep == 2) {
 				statRend.sprite = stat2;
 			}
-			if (gameManager.gameMng.wealth == 3) {
+			if (gameManager.gameMng.rep == 3) {
 				statRend.sprite = stat3;
 			}
-			if (gameManager.gameMng.wealth == 4) {
+			if (gameManager.gameMng.rep == 4) {
 				statRend.sprite = stat4;
 			}
 		}
