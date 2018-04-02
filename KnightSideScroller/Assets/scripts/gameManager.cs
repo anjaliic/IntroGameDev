@@ -8,10 +8,6 @@ public class gameManager : MonoBehaviour {
 
 	public Font narrateFont;
 
-//	//global player controls
-//	public float playerSpeedCtrl;
-//	public float jumpSpeedCtrl;
-
 	//armor choice
 	public bool choiceArmor;
 

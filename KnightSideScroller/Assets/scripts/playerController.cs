@@ -6,23 +6,7 @@ public class playerController : MonoBehaviour {
 
 	public static playerController playerCtrl;
 
-//	public AnimationClip silveridle;
-//	public AnimationClip silverwalk;
-//
-//	public AnimationClip rougeidle;
-//	public AnimationClip rougewalk;
-//
-//	public AnimationClip keppelidle;
-//	public AnimationClip keppelwalk;
-//
-//	Animation playerAnim;
-//
-//	AnimationClip playerWalk;
-//	AnimationClip playerIdle;
-
 	AudioSource walkAudio;
-
-//	public GameObject Player;
 
 	public Rigidbody2D playerRB;
 
@@ -41,12 +25,7 @@ public class playerController : MonoBehaviour {
 
 	void Start()
 	{
-//		playerAnim = GetComponent<Animation> ();
-
 		walkAudio = GetComponent<AudioSource> ();
-
-//		playerIdle = silveridle;
-//		playerWalk = silverwalk;
 
 		playerCtrl = this;
 
@@ -63,15 +42,16 @@ public class playerController : MonoBehaviour {
 
 	void Update () 
 	{	
-//		playerAnim.Equals(playerIdle);
+		if (isFalling == false && isWalking == false) {
+			walkAudio.mute = true;
+		} else
+		{
+			walkAudio.mute = false;
+		}
+
 		//movement controls
 		PlayerWalk ();
 		PlayerJump ();
-
-		if (isWalking == true) 
-		{
-//			playerAnim.Equals (playerWalk);
-		}
 
 		playerArmor ();	//choice1
 	}
@@ -81,10 +61,13 @@ public class playerController : MonoBehaviour {
 		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow))
 		{
 			isWalking = true;
+			spriteRend.flipX = false;
 			transform.position += transform.right * playerSpeed * Time.deltaTime;
 		} 
-		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow))
+		{
 			isWalking = true;
+			spriteRend.flipX = true;
 			transform.position += transform.right * -playerSpeed * Time.deltaTime;
 		} 
 		if (!Input.GetKey (KeyCode.D) && !Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.LeftArrow))

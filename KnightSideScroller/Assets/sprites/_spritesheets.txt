@@ -1,3 +1,4 @@
 knightanim.png,50,90,4
 rouge%20knight%20anim.png,50,90,4
 keppel%20knight-anim.png,50,90,4
+brother-anim.png,50,120,6

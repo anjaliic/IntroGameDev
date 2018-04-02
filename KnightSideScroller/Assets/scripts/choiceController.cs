@@ -6,23 +6,18 @@ public class choiceController : MonoBehaviour {
 
 	public static choiceController _choice;
 
-	public AudioClip itemCollect;
 	AudioSource choiceAudio;
 
-	// Use this for initialization
 	void Start () 
 	{
 		_choice = this;
 		choiceAudio = GetComponent<AudioSource> ();
-		choiceAudio.clip = itemCollect;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		armorChoice ();
-
 		StarterGold ();
-
 		searchChoice ();
 	}
 
@@ -33,14 +28,16 @@ public class choiceController : MonoBehaviour {
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name.Equals ("armor1"))
 			{
+				choiceAudio.Play ();
 				gameManager.gameMng.armor1 = true;
-				GetComponent<AudioSource> ().Play ();
+
 				Debug.Log ("armor 1 = true");
 			}
 			if (this.gameObject.name.Equals ("armor2"))
 			{
+				choiceAudio.Play ();
 				gameManager.gameMng.armor2 = true;
-				GetComponent<AudioSource> ().Play ();
+		
 				Debug.Log ("armor2 = true");
 			}
 			gameManager.gameMng.choiceArmor = true;

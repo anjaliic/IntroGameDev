@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: e0a21d9255ec0c24997d4530ee534441
-timeCreated: 1522011886
+timeCreated: 1522628853
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: brother-anim_0
     21300002: brother-anim_1
+    21300004: brother-anim_2
+    21300006: brother-anim_3
+    21300008: brother-anim_4
+    21300010: brother-anim_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -84,9 +88,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 10
-        width: 41
-        height: 103
+        y: 9
+        width: 46
+        height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -97,10 +101,66 @@ TextureImporter:
       name: brother-anim_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 52
         y: 9
-        width: 41
-        height: 102
+        width: 46
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brother-anim_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 129
+        width: 46
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brother-anim_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 129
+        width: 46
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brother-anim_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 129
+        width: 46
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brother-anim_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 9
+        width: 46
+        height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -23,6 +23,7 @@ public class areaController : MonoBehaviour {
 		if(this.gameObject.name.Equals("A_1") && A1 == false)
 		{
 			Destroy (this.areaCollider);
+			A1 = true;
 		}
 	}
 }

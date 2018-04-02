@@ -37,7 +37,8 @@ public class statController : MonoBehaviour {
 
 		Reputation ();
 
-		if (gameManager.gameMng.statReset == true) {
+		if (gameManager.gameMng.statReset == true)
+		{
 			gameManager.gameMng.strength = 1;
 			gameManager.gameMng.cunning = 1;
 			gameManager.gameMng.wealth = 1;
@@ -48,16 +49,20 @@ public class statController : MonoBehaviour {
 
 	void StatIntro ()
 	{
-		if (this.gameObject.name.Equals ("strengthBar") && gameManager.gameMng.strengthBool == true) {
+		if (this.gameObject.name.Equals ("strengthBar") && gameManager.gameMng.strengthBool == true)
+		{
 			statRend.sprite = statMax;
 		}
-		if (this.gameObject.name.Equals ("cunningBar") && gameManager.gameMng.cunningBool == true) {
+		if (this.gameObject.name.Equals ("cunningBar") && gameManager.gameMng.cunningBool == true)
+		{
 			statRend.sprite = statMax;
 		}
-		if (this.gameObject.name.Equals ("wealthBar") && gameManager.gameMng.wealthBool == true) {
+		if (this.gameObject.name.Equals ("wealthBar") && gameManager.gameMng.wealthBool == true)
+		{
 			statRend.sprite = statMax;
 		}
-		if (this.gameObject.name.Equals ("reputation") && gameManager.gameMng.repBool == true) {
+		if (this.gameObject.name.Equals ("reputation") && gameManager.gameMng.repBool == true)
+		{
 			statRend.sprite = statMax;
 		}
 	}
