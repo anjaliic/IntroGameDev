@@ -2148,7 +2148,7 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2250,7 +2250,7 @@ MonoBehaviour:
   playerarmor1: {fileID: 21300000, guid: a6c2c3f8ac3656e4d968abebf98bb550, type: 3}
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
-  jumpSpeed: 12
+  jumpSpeed: 15
   playerSpeed: 25
   isWalking: 0
   isFalling: 0
