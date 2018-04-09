@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class dialogueController : MonoBehaviour {
 
+	//controls dialogue from characters (not narrator)
+
 	SpriteRenderer speechRend;
 	public Sprite invis;
 	public Sprite visible;

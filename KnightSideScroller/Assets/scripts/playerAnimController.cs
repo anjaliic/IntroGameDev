@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerAnimController : MonoBehaviour {
 
+	//stores animation stuffs/dont juice
+
 	Animator anim;
 
 	void Start ()
@@ -14,9 +16,6 @@ public class playerAnimController : MonoBehaviour {
 	void Update ()
 	{
 		silverArmorAnimation ();
-
-//		if(gameManager)
-
 		rougeArmorAnimation ();
 		keppelArmorAnimation ();
 	}
@@ -45,6 +44,7 @@ public class playerAnimController : MonoBehaviour {
 			anim.SetBool ("rouge", true);
 			anim.SetBool ("s_idle", false);
 			anim.SetBool ("s_walk", false);
+
 			if (playerController.playerCtrl.isWalking == true) 
 			{
 				anim.SetBool ("r_idle", false);

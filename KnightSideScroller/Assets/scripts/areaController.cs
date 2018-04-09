@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//blocks player from progressing without reading all of the character dialogue (still working on it)
+
 public class areaController : MonoBehaviour {
 
 	public static areaController areaCtrl;

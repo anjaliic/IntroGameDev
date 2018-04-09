@@ -86,6 +86,7 @@ public class playerController : MonoBehaviour {
 		}
 	}
 
+	//changes armor color 
 	void playerArmor ()
 	{
 		if (gameManager.gameMng.choiceArmor.Equals (true))

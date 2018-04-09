@@ -12,6 +12,7 @@ TagManager:
   - search
   - gold
   - d_choice
+  - gift
   layers:
   - Default
   - TransparentFX

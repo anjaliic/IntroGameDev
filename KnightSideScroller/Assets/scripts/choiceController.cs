@@ -21,24 +21,7 @@ public class choiceController : MonoBehaviour {
 		armorChoice ();
 		StarterGold ();
 		searchChoice ();
-
-		if (gameManager.gameMng.choiceGift == false && this.gameObject.transform.parent.name.Equals("Gift")) 
-		{
-			this.gameObject.SetActive (false);
-			if (this.gameObject.name.Equals ("g1"))
-			{
-				gameManager.gameMng.gift1 = true;
-			}
-			if (this.gameObject.name.Equals ("g2"))
-			{
-				gameManager.gameMng.gift2 = true;
-			}
-			if (this.gameObject.name.Equals ("g3"))
-			{
-				gameManager.gameMng.gift3 = true;
-			}
-			gameManager.gameMng.choiceGift = true;
-		}
+		giftChoice ();
 	}
 
 	void armorChoice ()
@@ -87,6 +70,30 @@ public class choiceController : MonoBehaviour {
 				gameManager.gameMng.search2 = true;
 			}
 			gameManager.gameMng.choiceSearch = true;
+		}
+	}
+
+	void giftChoice ()
+	{
+		if (gameManager.gameMng.choiceGift == false && this.gameObject.transform.parent.name.Equals ("Gift"))
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name.Equals ("g1"))
+			{
+				gameManager.gameMng.gift1 = true;
+				gameManager.gameMng.strength++;
+			}
+			if (this.gameObject.name.Equals ("g2"))
+			{
+				gameManager.gameMng.gift2 = true;
+				gameManager.gameMng.cunning++;
+			}
+			if (this.gameObject.name.Equals ("g3"))
+			{
+				gameManager.gameMng.gift3 = true;
+				gameManager.gameMng.wealth++;
+			}
+			gameManager.gameMng.choiceGift = true;
 		}
 	}
 }
