@@ -8,6 +8,8 @@ public class choiceController : MonoBehaviour {
 
 	AudioSource choiceAudio;
 
+	public Sprite choice;
+
 	void Start () 
 	{
 		_choice = this;
@@ -19,26 +21,40 @@ public class choiceController : MonoBehaviour {
 		armorChoice ();
 		StarterGold ();
 		searchChoice ();
+
+		if (gameManager.gameMng.choiceGift == false && this.gameObject.transform.parent.name.Equals("Gift")) 
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name.Equals ("g1"))
+			{
+				gameManager.gameMng.gift1 = true;
+			}
+			if (this.gameObject.name.Equals ("g2"))
+			{
+				gameManager.gameMng.gift2 = true;
+			}
+			if (this.gameObject.name.Equals ("g3"))
+			{
+				gameManager.gameMng.gift3 = true;
+			}
+			gameManager.gameMng.choiceGift = true;
+		}
 	}
 
 	void armorChoice ()
 	{
-		if (gameManager.gameMng.choiceArmor == false && this.gameObject.tag.Equals ("armor")) 
+		if (gameManager.gameMng.choiceArmor == false && this.gameObject.transform.parent.name.Equals("Armor")) 
 		{
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name.Equals ("armor1"))
 			{
-				choiceAudio.Play ();
+//				choiceAudio.PlayOneShot(1);
 				gameManager.gameMng.armor1 = true;
-
-				Debug.Log ("armor 1 = true");
 			}
 			if (this.gameObject.name.Equals ("armor2"))
 			{
-				choiceAudio.Play ();
+//				choiceAudio.PlayOneShot (1);
 				gameManager.gameMng.armor2 = true;
-		
-				Debug.Log ("armor2 = true");
 			}
 			gameManager.gameMng.choiceArmor = true;
 		}

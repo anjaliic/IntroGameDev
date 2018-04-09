@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62061123}
   m_Layer: 0
-  m_Name: choiceItem
+  m_Name: StarterGold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!61 &249117535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!82 &249117537
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1691,6 +1693,10 @@ MonoBehaviour:
   search1: 0
   search2: 0
   starterGold: 0
+  choiceGift: 0
+  gift1: 0
+  gift2: 0
+  gift3: 0
 --- !u!4 &388455065
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,7 +1904,7 @@ GameObject:
   - component: {fileID: 413850657}
   m_Layer: 0
   m_Name: armor2
-  m_TagString: armor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1971,6 +1977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!61 &413850655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2965,7 +2972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534868828}
   m_Layer: 0
-  m_Name: choiceArmor
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,6 +3108,11 @@ MonoBehaviour:
   visible: {fileID: 21300000, guid: 17ad8240fa988804bb8e00a5d7ca9293, type: 3}
   d2: {fileID: 0}
   d3: {fileID: 0}
+  d4: {fileID: 0}
+  d5: {fileID: 0}
+  d6: {fileID: 0}
+  d7: {fileID: 0}
+  d8: {fileID: 0}
 --- !u!1 &570277272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,6 +3259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!82 &614554753
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4405,6 +4418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!82 &1032238168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4964,7 +4978,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.78}
+    oldSize: {x: 0.46, y: 0.74}
     newSize: {x: 0.44, y: 0.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5733,7 +5747,7 @@ GameObject:
   - component: {fileID: 1500661771}
   m_Layer: 0
   m_Name: armor1
-  m_TagString: armor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5851,6 +5865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choice: {fileID: 0}
 --- !u!82 &1500661771
 AudioSource:
   m_ObjectHideFlags: 0

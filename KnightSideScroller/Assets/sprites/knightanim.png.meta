@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6fd3c202d9b48d741870cfcf968220cc
-timeCreated: 1522611630
+timeCreated: 1522681595
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,7 +64,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +73,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +88,7 @@ TextureImporter:
         x: 2
         y: 93
         width: 46
-        height: 72
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,7 +102,7 @@ TextureImporter:
         x: 52
         y: 93
         width: 46
-        height: 78
+        height: 77
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,7 +116,7 @@ TextureImporter:
         x: 2
         y: 2
         width: 46
-        height: 73
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

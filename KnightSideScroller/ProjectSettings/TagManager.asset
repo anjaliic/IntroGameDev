@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - armor
   - stat
   - narration
   - n_intro
@@ -12,6 +11,7 @@ TagManager:
   - convo
   - search
   - gold
+  - d_choice
   layers:
   - Default
   - TransparentFX

@@ -430,7 +430,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.67, y: 2.25}
+    oldSize: {x: 1.4, y: 1}
     newSize: {x: 3.87, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -451,9 +451,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invis: {fileID: 0}
-  visible: {fileID: 21300000, guid: b74cdb6f6782c4f49a06f919f7308ffd, type: 3}
-  d2: {fileID: 21300000, guid: b74cdb6f6782c4f49a06f919f7308ffd, type: 3}
-  d3: {fileID: 21300000, guid: b74cdb6f6782c4f49a06f919f7308ffd, type: 3}
+  visible: {fileID: 0}
+  d2: {fileID: 0}
+  d3: {fileID: 0}
+  d4: {fileID: 0}
+  d5: {fileID: 0}
+  d6: {fileID: 0}
+  d7: {fileID: 0}
+  d8: {fileID: 0}
 --- !u!212 &124362454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +493,7 @@ SpriteRenderer:
   m_SortingLayerID: -228920193
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b74cdb6f6782c4f49a06f919f7308ffd, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -496,7 +501,7 @@ SpriteRenderer:
   m_Size: {x: 3.87, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &140359026
 GameObject:
@@ -1211,7 +1216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A1: 0
-  A2: 1
 --- !u!61 &701564643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2274,6 +2278,7 @@ GameObject:
   - component: {fileID: 1266636970}
   - component: {fileID: 1266636969}
   - component: {fileID: 1266636968}
+  - component: {fileID: 1266636971}
   m_Layer: 0
   m_Name: NPC_Troll
   m_TagString: Untagged
@@ -2340,7 +2345,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2352,12 +2357,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266636967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.68, y: -2.24, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 12.39, y: -5.06, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1266636971
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266636967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d317e8ff91ee0dc4dbf260ebf9c43cb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1280043507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,6 +3341,7 @@ GameObject:
   - component: {fileID: 1818262958}
   - component: {fileID: 1818262957}
   - component: {fileID: 1818262956}
+  - component: {fileID: 1818262959}
   m_Layer: 0
   m_Name: 'NPC_Troll '
   m_TagString: Untagged
@@ -3380,7 +3403,7 @@ SpriteRenderer:
   m_SortingLayerID: -228920193
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e13cd123ff17a104a9e09c8bde5f320e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b74cdb6f6782c4f49a06f919f7308ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3397,12 +3420,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1818262955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.1, y: -2.95, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 16.71, y: -5.05, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1818262959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818262955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 842931f81eb62e04d9c8dd9664adb796, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1869995137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,7 +3810,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.15, y: 1.8}
+    oldSize: {x: 1, y: 1.2}
     newSize: {x: 3.87, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3791,9 +3831,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invis: {fileID: 0}
-  visible: {fileID: 21300000, guid: e4efa08e844020f4ea1ebd47928adecb, type: 3}
-  d2: {fileID: 21300000, guid: e4efa08e844020f4ea1ebd47928adecb, type: 3}
-  d3: {fileID: 21300000, guid: e4efa08e844020f4ea1ebd47928adecb, type: 3}
+  visible: {fileID: 0}
+  d2: {fileID: 0}
+  d3: {fileID: 0}
+  d4: {fileID: 0}
+  d5: {fileID: 0}
+  d6: {fileID: 0}
+  d7: {fileID: 0}
+  d8: {fileID: 0}
 --- !u!212 &2001207962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3828,7 +3873,7 @@ SpriteRenderer:
   m_SortingLayerID: -228920193
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e4efa08e844020f4ea1ebd47928adecb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3836,7 +3881,7 @@ SpriteRenderer:
   m_Size: {x: 3.87, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &2012499086
 GameObject:

@@ -9,6 +9,11 @@ public class dialogueController : MonoBehaviour {
 	public Sprite visible;
 	public Sprite d2;
 	public Sprite d3;
+	public Sprite d4;
+	public Sprite d5;
+	public Sprite d6;
+	public Sprite d7;
+	public Sprite d8;
 
 	bool d2bool;
 	bool d3bool;
@@ -35,6 +40,7 @@ public class dialogueController : MonoBehaviour {
 		{
 			speechRend.sprite = d3;
 			d3bool = true;
+			d2bool = false;
 			Debug.Log ("dialogue 3 is visible");
 		}
 
@@ -48,6 +54,6 @@ public class dialogueController : MonoBehaviour {
 	{
 		speechRend.sprite = visible;
 		Debug.Log ("dialogue is visible");
-		Destroy (d_collider);
+		Destroy (this.d_collider);
 	}
 }
