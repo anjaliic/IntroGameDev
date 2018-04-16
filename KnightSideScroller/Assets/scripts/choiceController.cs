@@ -6,14 +6,14 @@ public class choiceController : MonoBehaviour {
 
 	public static choiceController _choice;
 
-	AudioSource choiceAudio;
+	public AudioClip collectItem;
+
 
 	public Sprite choice;
 
 	void Start () 
 	{
 		_choice = this;
-		choiceAudio = GetComponent<AudioSource> ();
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -31,12 +31,16 @@ public class choiceController : MonoBehaviour {
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name.Equals ("armor1"))
 			{
+				//Nina: Play a sound using the scenes soundmanager
+				soundManager.playSound (collectItem);
 //				choiceAudio.PlayOneShot(1);
 				gameManager.gameMng.armor1 = true;
 			}
 			if (this.gameObject.name.Equals ("armor2"))
 			{
 //				choiceAudio.PlayOneShot (1);
+				//Nina: Play a sound using the scenes soundmanager
+				soundManager.playSound (collectItem);
 				gameManager.gameMng.armor2 = true;
 			}
 			gameManager.gameMng.choiceArmor = true;
@@ -51,6 +55,8 @@ public class choiceController : MonoBehaviour {
 			if (this.gameObject.name.Equals ("startergold")) 
 			{
 				gameManager.gameMng.wealth++;
+				//Nina: Play a sound using the scenes soundmanager
+				soundManager.playSound (collectItem);
 			}
 			gameManager.gameMng.starterGold = true;
 		}

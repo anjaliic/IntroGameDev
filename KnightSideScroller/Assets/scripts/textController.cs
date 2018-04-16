@@ -10,6 +10,8 @@ public class textController : MonoBehaviour {
 
 	string narration;
 
+	private bool entered =false; //Nina: switch to true when player walks by
+
 	void Start()
 	{
 		narrate = GetComponent<TextMesh> ();
@@ -67,8 +69,15 @@ public class textController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		narrate.text = (narration);
-		statReset ();
+		//Nina: call the textmesh animation, but only if it hasn't been called yet on this
+		//text object, so id doesn't keep fading everytime you walk by it
+		if (!entered) {
+			entered = true;
+			narrate.text = (narration);
+			narrate.color = new Color (narrate.color.r, narrate.color.g, narrate.color.b, 0f);
+			StartCoroutine (animateAlpha (narrate));
+			statReset ();
+		}
 	}
 
 	void statReset ()
@@ -87,6 +96,14 @@ public class textController : MonoBehaviour {
 		}
 		if (this.gameObject.name == ("Stat_6")) {
 			gameManager.gameMng.statReset = true;
+		}
+	}
+
+	//Nina: creates the animation for the textmesh fading into the screen
+	IEnumerator animateAlpha(TextMesh t){
+		for(float i = 0f; i < 10f;i++){
+			yield return new WaitForSeconds (.01f + (i / 300f));
+			narrate.color = new Color(narrate.color.r, narrate.color.g, narrate.color.b, ((i+1.001f)/10f));
 		}
 	}
 }
