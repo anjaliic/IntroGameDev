@@ -10,19 +10,19 @@ public class soundManager : MonoBehaviour {
 
 	public static AudioSource source;
 
-
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		source = gameObject.GetComponent<AudioSource> ();
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void Awake()
+	{
+		DontDestroyOnLoad (this);
 	}
 
-	public static void playSound(AudioClip clip){
+	public static void playSound(AudioClip clip)
+	{
 		source.PlayOneShot (clip);
 	}
 }

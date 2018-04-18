@@ -1738,6 +1738,9 @@ MonoBehaviour:
   search1: 0
   search2: 0
   starterGold: 0
+  choiceQ1: 0
+  q1_1: 0
+  q1_2: 0
   choiceGift: 0
   gift1: 0
   gift2: 0
@@ -3151,8 +3154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc6262d082eb564480c8abf113b7fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speechRend: {fileID: 0}
   invis: {fileID: 0}
-  visible: {fileID: 21300000, guid: 17ad8240fa988804bb8e00a5d7ca9293, type: 3}
+  d1: {fileID: 0}
   d2: {fileID: 0}
   d3: {fileID: 0}
   d4: {fileID: 0}
@@ -3160,6 +3164,15 @@ MonoBehaviour:
   d6: {fileID: 0}
   d7: {fileID: 0}
   d8: {fileID: 0}
+  d1bool: 0
+  d2bool: 0
+  d3bool: 0
+  d4bool: 0
+  d5bool: 0
+  d6bool: 0
+  d7bool: 0
+  d8bool: 0
+  contDialogue: 1
 --- !u!1 &570277272
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,7 +5209,7 @@ MonoBehaviour:
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
   jumpSpeed: 15
-  playerSpeed: 25
+  playerSpeed: 100
   isWalking: 0
   isFalling: 0
   groundParticleSystem: {fileID: 1621192103914500, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
@@ -6452,7 +6465,7 @@ TextMesh:
   m_GameObject: {fileID: 1557183214}
   m_Text: "Before you go, though, take some gold with you.\n\t\t\t\t\t\t\t\tYou really
     shouldn't travel with an empty wallet, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tor whatever
-    it is kights store their money in."
+    it is knights store their money in."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

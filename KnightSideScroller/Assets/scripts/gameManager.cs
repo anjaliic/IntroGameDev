@@ -36,6 +36,10 @@ public class gameManager : MonoBehaviour {
 
 	public bool starterGold;
 
+	public bool choiceQ1;
+	public bool q1_1;
+	public bool q1_2;
+
 	public bool choiceGift;
 
 	public bool gift1;
