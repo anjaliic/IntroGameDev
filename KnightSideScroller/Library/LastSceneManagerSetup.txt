@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/scene_2.unity
+- path: Assets/scenes/river.unity
   isLoaded: 1
   isActive: 1

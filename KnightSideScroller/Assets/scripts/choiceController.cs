@@ -19,6 +19,9 @@ public class choiceController : MonoBehaviour {
 	public Sprite choice;
 
 	bool showQ1;
+	bool showGift;
+
+	public bool showQ2;
 
 	void Start () 
 	{
@@ -36,21 +39,47 @@ public class choiceController : MonoBehaviour {
 
 	void Update()
 	{
-		if (this.gameObject.transform.parent.name == ("Question") && sceneName == ("scene_2")) 
-		{
-			if(dialogueController.dialogueCtrl.d3bool == true)
+		Scene2Mission ();
+
+
+	}
+
+	void Scene2Mission ()
+	{
+
+		//Controls when question 1 is visible/interactable
+		if (this.gameObject.transform.parent.name == ("Question") && sceneName == ("scene_2")) {
+			if (dialogueController.dialogueCtrl.d3bool == true) 
 			{
 				dialogueController.dialogueCtrl.contDialogue = false;
 				showQ1 = true;
 			}
+			if (showQ1 == true) 
+			{
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (4.5f, 2.25f);
+			}
+			else
+				if (showQ1 == false)
+				{
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
 		}
-		if (showQ1 == true) 
+
+
+		//Controls when gift is visible/interactable
+		if (this.gameObject.transform.parent.name == ("Gift") && sceneName == ("scene_2"))
 		{
-			choiceRend.color = new Color (255,255,255,255);
-			choiceColl.size = new Vector2 (4.5f,2.25f);
+			if(dialogueController.dialogueCtrl.d8bool == true)
+			{
+				showGift = true;
+			}
+			if(showGift == true)
+			{
+				choiceRend.color = new Color (0,0,0,255);
+			}
 		}
-			
-	
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -58,24 +87,7 @@ public class choiceController : MonoBehaviour {
 		armorChoice ();
 		StarterGold ();
 //		searchChoice ();
-
-		if (gameManager.gameMng.choiceQ1 == false && this.gameObject.transform.parent.name == ("Question")) 
-		{
-			Debug.Log ("collides with question");
-			this.gameObject.SetActive (false);
-			if(this.gameObject.name == ("q1"))
-			{
-				dialogueController.dialogueCtrl.d5b = true;
-				gameManager.gameMng.q1_1 = true;
-			}
-			if(this.gameObject.name == ("q2"))
-			{
-				dialogueController.dialogueCtrl.d4b = true;
-				gameManager.gameMng.q1_2 = true;
-			}
-			gameManager.gameMng.choiceQ1 = true;
-		}
-
+		q1Choice ();
 		giftChoice ();
 	}
 
@@ -114,6 +126,24 @@ public class choiceController : MonoBehaviour {
 				soundManager.playSound (collectItem);
 			}
 			gameManager.gameMng.starterGold = true;
+		}
+	}
+
+	void q1Choice ()
+	{
+		if (gameManager.gameMng.choiceQ1 == false && this.gameObject.transform.parent.name == ("Question")) {
+			Debug.Log ("collides with question");
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name == ("q1")) {
+				dialogueController.dialogueCtrl.d5b = true;
+				gameManager.gameMng.q1_1 = true;
+			}
+			if (this.gameObject.name == ("q2")) {
+				dialogueController.dialogueCtrl.d4b = true;
+				gameManager.gameMng.q1_2 = true;
+			}
+			showQ1 = false;
+			gameManager.gameMng.choiceQ1 = true;
 		}
 	}
 

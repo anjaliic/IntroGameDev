@@ -32,19 +32,5 @@ public class sceneController : MonoBehaviour {
 			SceneManager.SetActiveScene (river);
 		}
 
-//		if (this.gameObject.name == ("ST_2"))
-//		{
-//			if (gameManager.gameMng.search1 == true)
-//			{
-//				SceneManager.LoadScene ("scene_3_forest", LoadSceneMode.Single);
-//				SceneManager.SetActiveScene (scene_3fr);
-//			}
-//			if (gameManager.gameMng.search2 == true)
-//			{
-//				SceneManager.LoadScene ("scene_3_mt", LoadSceneMode.Single);
-//				SceneManager.SetActiveScene (scene_3mt);
-//			}
-//		}
-
 	}
 }
