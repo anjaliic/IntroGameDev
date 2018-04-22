@@ -16,7 +16,7 @@ public class sceneController : MonoBehaviour {
 		start = SceneManager.GetSceneByName ("game_start");
 		scene_2 = SceneManager.GetSceneByName ("scene_2");
 		river = SceneManager.GetSceneByName ("river");
-		scene_3fr = SceneManager.GetSceneByName ("scene_3_forest");
+		scene_3fr = SceneManager.GetSceneByName ("scene_3_fr");
 		scene_3mt = SceneManager.GetSceneByName ("scene_3_mt");
 	}
 	void OnTriggerEnter2D(Collider2D player){
@@ -30,6 +30,18 @@ public class sceneController : MonoBehaviour {
 		if (this.gameObject.name == ("ST_2")) {
 			SceneManager.LoadScene ("river", LoadSceneMode.Single);
 			SceneManager.SetActiveScene (river);
+		}
+
+		if (this.gameObject.name == ("ST_3") && gameManager.gameMng.search1 == true) 
+		{
+			SceneManager.LoadScene ("scene_3fr", LoadSceneMode.Single);
+			SceneManager.SetActiveScene (scene_3fr);
+		}
+
+		if (this.gameObject.name == ("ST_3") && gameManager.gameMng.search2 == true) 
+		{
+			SceneManager.LoadScene ("scene_3_mt", LoadSceneMode.Single);
+			SceneManager.SetActiveScene (scene_3mt);
 		}
 
 	}

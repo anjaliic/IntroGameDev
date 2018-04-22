@@ -20,8 +20,12 @@ public class choiceController : MonoBehaviour {
 
 	bool showQ1;
 	bool showGift;
+	//bool showQ1 in gameMng 
+	//bool showQ3 in gameMng // Yes / No
+	//showQ4_1
+	//bool showQ4_2
 
-	public bool showQ2;
+	List<string> Hide = new List<string> {"Question", "Gift", "Question2", "Question3", "Question4_1","Question4_2", "Troll", "Troll2"};
 
 	void Start () 
 	{
@@ -31,7 +35,7 @@ public class choiceController : MonoBehaviour {
 		choiceRend = GetComponent<SpriteRenderer> ();
 		_choice = this;
 
-		if(this.gameObject.transform.parent.name == ("Question") || this.gameObject.transform.parent.name == ("Gift"))
+		if(Hide.Contains(this.gameObject.transform.parent.name))
 		{
 			choiceRend.color = new Color(255,255,255,0);
 		}
@@ -40,15 +44,39 @@ public class choiceController : MonoBehaviour {
 	void Update()
 	{
 		Scene2Mission ();
+		Scene3River ();
+	
+		if (gameManager.gameMng.showTroll == true && this.gameObject.transform.parent.name == ("Troll"))
+		{
+			choiceRend.color = new Color (255, 255, 255, 255);
+			if (this.gameObject.name == ("troll1")) {
+				choiceColl.size = new Vector2 (1f, 1f);
+			}
+			if (this.gameObject.name == ("troll2")) {
+				choiceColl.size = new Vector2 (5f, 2f);
+			}
+		} else if (gameManager.gameMng.showTroll == false && this.gameObject.transform.parent.name == ("Troll"))
+		{
+			choiceRend.color = new Color (255, 255, 255, 0);
+			choiceColl.size = new Vector2 (0f, 0f);
+		}
 
-
+		if (gameManager.gameMng.showTroll2 == true && this.gameObject.transform.parent.name == ("Troll2"))
+		{
+			choiceRend.color = new Color (255, 255, 255, 255);
+			choiceColl.size = new Vector2 (6f, 1f);
+		} else if (gameManager.gameMng.showTroll2 == false && this.gameObject.transform.parent.name == ("Troll2"))
+		{
+			choiceRend.color = new Color (255, 255, 255, 0);
+			choiceColl.size = new Vector2 (0f, 0f);
+		}
 	}
 
 	void Scene2Mission ()
 	{
-
 		//Controls when question 1 is visible/interactable
-		if (this.gameObject.transform.parent.name == ("Question") && sceneName == ("scene_2")) {
+		if (this.gameObject.transform.parent.name == ("Question") && sceneName == ("scene_2"))
+		{
 			if (dialogueController.dialogueCtrl.d3bool == true) 
 			{
 				dialogueController.dialogueCtrl.contDialogue = false;
@@ -82,13 +110,123 @@ public class choiceController : MonoBehaviour {
 		}
 	}
 
+	void Scene3River ()
+	{
+		if (this.gameObject.transform.parent.name == ("Question2") && sceneName == ("river")) {
+			if (gameManager.gameMng.showQ2 == true) {
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (5f, 2.25f);
+			}
+			else
+				if (showQ1 == false) {
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
+		}
+		if (this.gameObject.transform.parent.name == ("Question3") && sceneName == ("river")) {
+			if (gameManager.gameMng.showQ3 == true) {
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (2f, 2f);
+			}
+			else
+				if (gameManager.gameMng.showQ3 == false) {
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
+		}
+		if (this.gameObject.transform.parent.name == ("Question4_1") && sceneName == ("river")) {
+			if (gameManager.gameMng.showQ4_1 == true) {
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (5f, 1f);
+			}
+			else
+				if (gameManager.gameMng.showQ4_1 == false) {
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
+		}
+		if (this.gameObject.transform.parent.name == ("Question4_2") && sceneName == ("river")) {
+			if (gameManager.gameMng.showQ4_2 == true) {
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (5f, 1f);
+			}
+			else
+				if (gameManager.gameMng.showQ4_2 == false) {
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		armorChoice ();
 		StarterGold ();
-//		searchChoice ();
+
 		q1Choice ();
 		giftChoice ();
+
+		q2Choice ();
+		q3Choice ();
+		q4Choice ();
+
+		searchChoice ();
+
+		if (gameManager.gameMng.choiceTroll == false && this.gameObject.transform.parent.name == ("Troll"))
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name.Equals ("troll1"))	//give gold
+			{
+				gameManager.gameMng.troll1 = true;
+				dialogueController.dialogueCtrl.d2b = true;
+				dialogue2Controller.dialogueCtrl2.d2b_2 = true;
+				gameManager.gameMng.wealth--; //lose one gold
+
+			}
+			if (this.gameObject.name.Equals ("troll2"))	//use your words
+			{
+				gameManager.gameMng.troll2 = true;
+				dialogueController.dialogueCtrl.d3b = true;
+				dialogue2Controller.dialogueCtrl2.d3b_2 = true;
+				gameManager.gameMng.showTroll2 = true;
+			}
+			gameManager.gameMng.choiceTroll = true;
+			gameManager.gameMng.showTroll = false;
+		}
+
+		if (gameManager.gameMng.troll2 == true && this.gameObject.transform.parent.name == ("Troll2"))
+		{
+			this.gameObject.SetActive(false);
+			if(this.gameObject.name == ("troll1"))
+			{
+				if (gameManager.gameMng.cunning >= 2) 
+				{
+					dialogueController.dialogueCtrl.d4b = true;
+					dialogue2Controller.dialogueCtrl2.d4b_2 = true;
+				} else if (gameManager.gameMng.cunning < 2)
+				{
+					dialogueController.dialogueCtrl.d5b = true;
+					dialogue2Controller.dialogueCtrl2.d5b_2 = true;
+					gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
+				}
+			}
+			if(this.gameObject.name == ("troll2"))
+			{
+				if (gameManager.gameMng.strength >= 2)
+				{
+					dialogueController.dialogueCtrl.d6b = true;
+					dialogue2Controller.dialogueCtrl2.d6b_2 = true;
+				} else if (gameManager.gameMng.strength < 2)
+				{
+					dialogueController.dialogueCtrl.d7b = true;
+					dialogue2Controller.dialogueCtrl2.d7b_2 = true;
+					gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
+				}
+			}
+			gameManager.gameMng.showTroll2 = false;
+			gameManager.gameMng.choiceTroll2 = true;
+		}
+
 	}
 
 	void armorChoice ()
@@ -121,7 +259,7 @@ public class choiceController : MonoBehaviour {
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name.Equals ("startergold")) 
 			{
-				gameManager.gameMng.wealth++;
+				gameManager.gameMng.wealth = gameManager.gameMng.wealth + 1;
 				//Nina: Play a sound using the scenes soundmanager
 				soundManager.playSound (collectItem);
 			}
@@ -131,8 +269,8 @@ public class choiceController : MonoBehaviour {
 
 	void q1Choice ()
 	{
-		if (gameManager.gameMng.choiceQ1 == false && this.gameObject.transform.parent.name == ("Question")) {
-			Debug.Log ("collides with question");
+		if (gameManager.gameMng.choiceQ1 == false && this.gameObject.transform.parent.name == ("Question")) 
+		{
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name == ("q1")) {
 				dialogueController.dialogueCtrl.d5b = true;
@@ -146,23 +284,6 @@ public class choiceController : MonoBehaviour {
 			gameManager.gameMng.choiceQ1 = true;
 		}
 	}
-
-//	void searchChoice ()
-//	{
-//		if (gameManager.gameMng.choiceSearch == false && this.gameObject.tag.Equals ("search")) 
-//		{
-//			this.gameObject.SetActive (false);
-//			if (this.gameObject.name.Equals ("search1"))
-//			{
-//				gameManager.gameMng.search1 = true;
-//			}
-//			if (this.gameObject.name.Equals ("search2")) 
-//			{
-//				gameManager.gameMng.search2 = true;
-//			}
-//			gameManager.gameMng.choiceSearch = true;
-//		}
-//	}
 
 	void giftChoice ()
 	{
@@ -187,4 +308,107 @@ public class choiceController : MonoBehaviour {
 			gameManager.gameMng.choiceGift = true;
 		}
 	}
+
+	void q2Choice ()
+	{
+		if (gameManager.gameMng.choiceQ2 == false && this.gameObject.transform.parent.name == ("Question2")) 
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name == ("q1")) //have you seen a boy?
+			{
+				dialogueController.dialogueCtrl.d1b = true; //he was here before
+				gameManager.gameMng.askDog = true;
+				gameManager.gameMng.q2_2 = true;
+			}
+			if (this.gameObject.name == ("q2"))	//your brother is looking for you
+			{
+				dialogueController.dialogueCtrl.d2b = true; //i dont have a brother
+				gameManager.gameMng.q2_2 = true;
+			}
+			gameManager.gameMng.showQ2 = false;
+			gameManager.gameMng.choiceQ2 = true;
+			dialogueController.dialogueCtrl.contDialogue = false;
+			areaController.areaCtrl.A3_2 = true;
+		}
+	}
+
+	void q3Choice ()
+	{
+		if (gameManager.gameMng.choiceQ3 == false && this.gameObject.transform.parent.name == ("Question3"))
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name == ("q1"))	//yes
+			{
+				dialogueController.dialogueCtrl.d4b = true;	//i wanna be a knight someday
+				gameManager.gameMng.q3_2 = true;
+				gameManager.gameMng.showQ4_1 = true;
+			}
+			if (this.gameObject.name == ("q2"))	//no
+			{
+				dialogueController.dialogueCtrl.d7b = true;	//then why are you dressed like that?
+				gameManager.gameMng.q3_2 = true;
+				gameManager.gameMng.showQ4_2 = true;
+			}
+			gameManager.gameMng.showQ3 = false;
+			gameManager.gameMng.choiceQ3 = true;
+		}
+	}
+
+	void q4Choice ()
+	{
+		if (gameManager.gameMng.choiceQ4 == false && this.gameObject.transform.parent.name == ("Question4_1")) 
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name == ("q1"))	//keep dreaming
+		{
+				gameManager.gameMng.q4_1_1 = true;
+				dialogueController.dialogueCtrl.d5b = true;	//thats what my mom always says
+			}
+			if (this.gameObject.name == ("q2"))	//never give up on your dreams
+		{
+				gameManager.gameMng.q4_1_2 = true;
+				dialogueController.dialogueCtrl.d6b = true;	//i wont!
+				gameManager.gameMng.rep++;
+			gameManager.gameMng.nice = true;
+			}
+			gameManager.gameMng.showQ4_1 = false;
+			gameManager.gameMng.choiceQ4 = true;
+
+		if (gameManager.gameMng.choiceQ4 == false && this.gameObject.transform.parent.name == ("Question4_2")) 
+		{
+			this.gameObject.SetActive (false);
+				Debug.Log ("test");
+			if (this.gameObject.name == ("q1")) 
+			{
+				gameManager.gameMng.q4_2 = true;
+				dialogueController.dialogueCtrl.d8b = true;
+			}
+			if (this.gameObject.name == ("q2"))
+			{
+					gameManager.gameMng.q4_2 = true;
+					dialogueController.dialogueCtrl.d8b = true;
+			}
+			gameManager.gameMng.showQ4_1 = false;
+			gameManager.gameMng.choiceQ4 = true;
+		}
+	}
 }
+
+	void searchChoice ()
+	{
+		if (gameManager.gameMng.choiceSearch == false && this.gameObject.transform.parent.name.Equals ("Search"))
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name.Equals ("search1"))
+			{
+				gameManager.gameMng.search1 = true;
+			}
+			if (this.gameObject.name.Equals ("search2")) 
+			{
+				gameManager.gameMng.search2 = true;
+			}
+			gameManager.gameMng.choiceArmor = true;
+		}
+	}
+}
+

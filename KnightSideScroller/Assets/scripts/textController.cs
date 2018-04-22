@@ -37,20 +37,16 @@ public class textController : MonoBehaviour {
 			narrate.text = ("");
 			Destroy (t_collider);
 		}
+
+		if (gameManager.gameMng.nice == true) 
+		{
+			if (this.gameObject.transform.parent.name == ("Cold"))
+			{
+				narrate.text = ("");
+			}
+
+		}
 			
-	
-//		if (Input.GetKey (KeyCode.C) && this.gameObject.name.Equals ("Fr_2"))
-//		{
-//			Destroy (t_collider);
-//			if (gameManager.gameMng.wealth > 1)
-//			{
-//				narrate.text = ("Try offering some of your gold.");
-//			}
-//			if (gameManager.gameMng.wealth ==1)
-//			{
-//				narrate.text = ("I would say offer them some gold, but you have none.");
-//			}
-//		}
 	}
 
 	void armorColor ()
@@ -82,7 +78,16 @@ public class textController : MonoBehaviour {
 
 		if(this.gameObject.name == ("Boy_3") )
 		{
-			choiceController._choice.showQ2 = true;
+			gameManager.gameMng.showQ2 = true;
+			Destroy (gameObject);
+		}
+
+		if (this.gameObject.name == ("Fr_4"))
+		{
+			if (gameManager.gameMng.choiceTroll == false)
+			{
+				gameManager.gameMng.showTroll = true;
+			}
 		}
 	}
 
