@@ -1,0 +1,2 @@
+witch1.png,70,110,2
+witch2_anim.png,42,99,2

@@ -32,9 +32,9 @@ public class areaController : MonoBehaviour {
 		Scene2MissionUpdate ();
 		Scene3River ();
 
-		if (sceneName == ("scene_3fr") && this.gameObject.transform.parent.name == ("Areas_4"))
+		if (this.gameObject.transform.parent.name == ("Areas_4"))
 		{
-			if (gameManager.gameMng.troll1 == true)
+			if (gameManager.gameMng.enemy1 == true || gameManager.gameMng.choiceEnemy2 == true)
 			{
 				if (this.gameObject.name == ("A_3"))
 				{

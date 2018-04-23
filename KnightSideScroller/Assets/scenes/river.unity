@@ -1165,6 +1165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349930650}
   - component: {fileID: 349930649}
+  - component: {fileID: 349930651}
   m_Layer: 0
   m_Name: NPC_Child
   m_TagString: Untagged
@@ -1206,7 +1207,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29cfe96a0efb0d0408c15172cfcecee5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f40eea0f580821e408d16939e6b8f853, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1223,12 +1224,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 349930648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.2, y: -1.3, z: 0.17014274}
-  m_LocalScale: {x: 4.5873156, y: 6.380975, z: 1}
+  m_LocalPosition: {x: 9.12, y: -0.8, z: 0.17014274}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &349930651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 349930648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58c58c521b3ca764aaebbd870cfa05be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &358740122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,8 +3871,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.87, y: 1.8}
-    newSize: {x: 3.87, y: 1.8}
+    oldSize: {x: 5.4, y: 1.8}
+    newSize: {x: 5.4, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3935,15 +3953,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d4de6a890d318504d94959cec211f1c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.87, y: 1.8}
+  m_Size: {x: 5.4, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &1132008715
 GameObject:
@@ -4709,7 +4727,7 @@ MonoBehaviour:
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
   jumpSpeed: 15
-  playerSpeed: 100
+  playerSpeed: 25
   isWalking: 0
   isFalling: 0
   groundParticleSystem: {fileID: 1621192103914500, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
@@ -6695,6 +6713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  A3_2: 0
 --- !u!61 &1799075748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7304,6 +7323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  A3_2: 0
 --- !u!61 &2144434092
 BoxCollider2D:
   m_ObjectHideFlags: 0

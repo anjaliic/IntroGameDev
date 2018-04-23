@@ -84,9 +84,9 @@ public class textController : MonoBehaviour {
 
 		if (this.gameObject.name == ("Fr_4"))
 		{
-			if (gameManager.gameMng.choiceTroll == false)
+			if (gameManager.gameMng.choiceEnemy == false)
 			{
-				gameManager.gameMng.showTroll = true;
+				gameManager.gameMng.showEnemy = true;
 			}
 		}
 	}

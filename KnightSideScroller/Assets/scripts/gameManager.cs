@@ -69,17 +69,17 @@ public class gameManager : MonoBehaviour {
 	public bool search2;
 
 
-	public bool showTroll;
+	public bool showEnemy;
 
-	public bool choiceTroll;
-	public bool troll1;
-	public bool troll2;
+	public bool choiceEnemy;
+	public bool enemy1;
+	public bool enemy2;
 
-	public bool showTroll2;
+	public bool showEnemy2;
 
-	public bool choiceTroll2;
-	public bool troll1_2;
-	public bool troll2_2;
+	public bool choiceEnemy2;
+	public bool enemy1_2;
+	public bool enemy2_2;
 
 
 

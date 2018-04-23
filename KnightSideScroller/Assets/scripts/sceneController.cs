@@ -10,6 +10,8 @@ public class sceneController : MonoBehaviour {
 	Scene river;
 	Scene scene_3fr;
 	Scene scene_3mt;
+	Scene caves;
+	Scene monster;
 
 	void Start()
 	{
@@ -18,6 +20,8 @@ public class sceneController : MonoBehaviour {
 		river = SceneManager.GetSceneByName ("river");
 		scene_3fr = SceneManager.GetSceneByName ("scene_3_fr");
 		scene_3mt = SceneManager.GetSceneByName ("scene_3_mt");
+		caves = SceneManager.GetSceneByName ("caves");
+		monster = SceneManager.GetSceneByName ("monster");
 	}
 	void OnTriggerEnter2D(Collider2D player){
 
@@ -44,5 +48,16 @@ public class sceneController : MonoBehaviour {
 			SceneManager.SetActiveScene (scene_3mt);
 		}
 
+		if(this.gameObject.name == ("ST_4"))
+		{
+			SceneManager.LoadScene ("caves", LoadSceneMode.Single);
+			SceneManager.SetActiveScene (caves);
+		}
+
+		if (this.gameObject.name == ("ST_5"))
+		{
+			SceneManager.LoadScene ("monster", LoadSceneMode.Single);
+			SceneManager.SetActiveScene (monster);
+		}
 	}
 }
