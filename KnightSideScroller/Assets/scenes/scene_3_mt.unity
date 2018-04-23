@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &110237675
 BoxCollider2D:
@@ -246,6 +247,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &188190646
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -52.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 198180245968635878, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
+        type: 2}
+      propertyPath: randomSeed
+      value: -817463329
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &201334345
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &478974970
 BoxCollider2D:
@@ -2426,7 +2475,7 @@ MonoBehaviour:
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
   jumpSpeed: 15
-  playerSpeed: 80
+  playerSpeed: 30
   isWalking: 0
   isFalling: 0
   groundParticleSystem: {fileID: 1621192103914500, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
@@ -4833,6 +4882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &2080797211
 BoxCollider2D:

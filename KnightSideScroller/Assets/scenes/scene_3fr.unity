@@ -222,7 +222,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158588352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -357,7 +357,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.06634939}
+  m_Offset: {x: 70, y: -0.06634939}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -368,7 +368,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 4.5573015}
+  m_Size: {x: 200, y: 4.5573015}
   m_EdgeRadius: 0
 --- !u!212 &169347690
 SpriteRenderer:
@@ -678,9 +678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat1: {fileID: 21300000, guid: d8630801c88a960498e870a176cffdc8, type: 3}
-  stat2: {fileID: 21300000, guid: af3b5d73845cb694d8acc678647ba497, type: 3}
-  stat3: {fileID: 21300000, guid: f1a890d63cc07bc4cba7a58e7e325dce, type: 3}
-  stat4: {fileID: 0}
+  stat2: {fileID: 21300000, guid: f1a890d63cc07bc4cba7a58e7e325dce, type: 3}
+  stat3: {fileID: 21300000, guid: dcdfeb0c9fdb90b45a0fc1c8623f6eec, type: 3}
+  stat4: {fileID: 21300000, guid: 4b9df390839f2314cb1258ce45fd1ac6, type: 3}
   statMax: {fileID: 21300000, guid: 4b9df390839f2314cb1258ce45fd1ac6, type: 3}
   statRend: {fileID: 0}
   statT: {fileID: 0}
@@ -868,7 +868,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360172700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -967,7 +967,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 420600201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1718,7 +1718,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 849995035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1822,6 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &891928952
 BoxCollider2D:
@@ -2136,6 +2137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &1029629285
 BoxCollider2D:
@@ -2424,6 +2426,53 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1259788848
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -52.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 198180245968635878, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
+        type: 2}
+      propertyPath: randomSeed
+      value: -817463329
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1308818724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2744,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343389383}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2812,6 +2861,7 @@ GameObject:
   - component: {fileID: 1490166377}
   - component: {fileID: 1490166376}
   - component: {fileID: 1490166375}
+  - component: {fileID: 1490166379}
   m_Layer: 0
   m_Name: enemy1
   m_TagString: d_choice
@@ -2888,7 +2938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dba2f8e72c84a48ac23c8a13c66cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectItem: {fileID: 0}
+  collectItem: {fileID: 8300000, guid: e4bcdacea97be29448f27170ec3585f3, type: 3}
   choice: {fileID: 21300000, guid: 5fb334fd2cd8c31488e574bb8598758d, type: 3}
 --- !u!212 &1490166378
 SpriteRenderer:
@@ -2934,6 +2984,86 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!82 &1490166379
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490166373}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e4bcdacea97be29448f27170ec3585f3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1504258699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +3134,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513513038}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3443,7 +3573,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1613686960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3542,7 +3672,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708902209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3714,7 +3844,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727208295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3813,7 +3943,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1849306167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4435,7 +4565,7 @@ MonoBehaviour:
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
   jumpSpeed: 15
-  playerSpeed: 80
+  playerSpeed: 30
   isWalking: 0
   isFalling: 0
   groundParticleSystem: {fileID: 1621192103914500, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
@@ -4526,7 +4656,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003089581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -5088,6 +5218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &2103373006
 BoxCollider2D:

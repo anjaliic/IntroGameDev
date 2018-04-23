@@ -4,3 +4,5 @@ keppel%20knight-anim.png,50,90,4
 brother-anim.png,50,120,6
 troll1.png,50,120,2
 troll2.png,70,100,2
+bro_smile.png,50,120,2
+bro_lost.png,25,60,2

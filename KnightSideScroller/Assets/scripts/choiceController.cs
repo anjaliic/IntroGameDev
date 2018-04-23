@@ -24,8 +24,9 @@ public class choiceController : MonoBehaviour {
 	//bool showQ3 in gameMng // Yes / No
 	//showQ4_1
 	//bool showQ4_2
+	bool showBones;
 
-	List<string> Hide = new List<string> {"Question", "Gift", "Question2", "Question3", "Question4_1","Question4_2", "Enemy", "Enemy2"};
+	List<string> Hide = new List<string> {"Question", "Gift", "Question2", "Question3", "Question4_1","Question4_2", "Enemy", "Enemy2", "Bones"};
 
 	void Start () 
 	{
@@ -45,30 +46,30 @@ public class choiceController : MonoBehaviour {
 	{
 		Scene2Mission ();
 		Scene3River ();
-	
-		if (gameManager.gameMng.showEnemy == true && this.gameObject.transform.parent.name == ("Enemy"))
-		{
-			choiceRend.color = new Color (255, 255, 255, 255);
-			if (this.gameObject.name == ("enemy1")) {
-				choiceColl.size = new Vector2 (1f, 1f);
-			}
-			if (this.gameObject.name == ("enemy2")) {
-				choiceColl.size = new Vector2 (5f, 2f);
-			}
-		} else if (gameManager.gameMng.showEnemy == false && this.gameObject.transform.parent.name == ("Enemy"))
-		{
-			choiceRend.color = new Color (255, 255, 255, 0);
-			choiceColl.size = new Vector2 (0f, 0f);
-		}
+		Scene4Forest ();
 
-		if (gameManager.gameMng.showEnemy2 == true && this.gameObject.transform.parent.name == ("Enemy2"))
+
+		if (this.gameObject.name == ("bones")) 
 		{
-			choiceRend.color = new Color (255, 255, 255, 255);
-			choiceColl.size = new Vector2 (6f, 1f);
-		} else if (gameManager.gameMng.showEnemy2 == false && this.gameObject.transform.parent.name == ("Enemy2"))
-		{
-			choiceRend.color = new Color (255, 255, 255, 0);
-			choiceColl.size = new Vector2 (0f, 0f);
+			if (dialogueController.dialogueCtrl.d3bool == true)
+			{
+				showBones = true;
+			}
+			if (showBones == true) 
+			{
+				choiceRend.color = new Color (255, 255, 255, 255);
+				choiceColl.size = new Vector2 (6f, 1.5f);
+				if (dialogueController.dialogueCtrl.d4bool == true)
+				{
+					showBones = false;
+				}
+			}
+			else
+				if (showBones == false)
+				{
+					choiceRend.color = new Color (255, 255, 255, 0);
+					choiceColl.size = new Vector2 (0f, 0f);
+				}
 		}
 	}
 
@@ -158,6 +159,33 @@ public class choiceController : MonoBehaviour {
 		}
 	}
 
+	void Scene4Forest ()
+	{
+		if (gameManager.gameMng.showEnemy == true && this.gameObject.transform.parent.name == ("Enemy")) {
+			choiceRend.color = new Color (255, 255, 255, 255);
+			if (this.gameObject.name == ("enemy1")) {
+				choiceColl.size = new Vector2 (1f, 1f);
+			}
+			if (this.gameObject.name == ("enemy2")) {
+				choiceColl.size = new Vector2 (5f, 2f);
+			}
+		}
+		else
+			if (gameManager.gameMng.showEnemy == false && this.gameObject.transform.parent.name == ("Enemy")) {
+				choiceRend.color = new Color (255, 255, 255, 0);
+				choiceColl.size = new Vector2 (0f, 0f);
+			}
+		if (gameManager.gameMng.showEnemy2 == true && this.gameObject.transform.parent.name == ("Enemy2")) {
+			choiceRend.color = new Color (255, 255, 255, 255);
+			choiceColl.size = new Vector2 (6f, 1f);
+		}
+		else
+			if (gameManager.gameMng.showEnemy2 == false && this.gameObject.transform.parent.name == ("Enemy2")) {
+				choiceRend.color = new Color (255, 255, 255, 0);
+				choiceColl.size = new Vector2 (0f, 0f);
+			}
+	}
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		armorChoice ();
@@ -170,65 +198,14 @@ public class choiceController : MonoBehaviour {
 		q3Choice ();
 		q4Choice ();
 
-		searchChoice ();
+//		searchChoice ();
 
-		if (gameManager.gameMng.choiceEnemy == false && this.gameObject.transform.parent.name == ("Enemy"))
+		enemyEncounter ();
+
+		if (this.gameObject.name == ("bones")) 
 		{
-			this.gameObject.SetActive (false);
-			if (this.gameObject.name.Equals ("enemy1"))	//give gold
-			{
-				gameManager.gameMng.enemy1 = true;
-				dialogueController.dialogueCtrl.d2b = true;
-				dialogue2Controller.dialogueCtrl2.d2b_2 = true;
-				gameManager.gameMng.wealth--; //lose one gold
 
-			}
-			if (this.gameObject.name.Equals ("enemy2"))	//use your words
-			{
-				gameManager.gameMng.enemy2 = true;
-				dialogueController.dialogueCtrl.d3b = true;
-				dialogue2Controller.dialogueCtrl2.d3b_2 = true;
-				gameManager.gameMng.showEnemy2 = true;
-			}
-			gameManager.gameMng.choiceEnemy = true;
-			gameManager.gameMng.showEnemy = false;
 		}
-
-		if (gameManager.gameMng.enemy2 == true && this.gameObject.transform.parent.name == ("Enemy2"))
-		{
-			this.gameObject.SetActive(false);
-			if(this.gameObject.name == ("enemy1"))
-			{
-				if (gameManager.gameMng.cunning >= 2) 
-				{
-					dialogueController.dialogueCtrl.d4b = true;
-					dialogue2Controller.dialogueCtrl2.d4b_2 = true;
-					gameManager.gameMng.rep++;
-				} else if (gameManager.gameMng.cunning < 2)
-				{
-					dialogueController.dialogueCtrl.d5b = true;
-					dialogue2Controller.dialogueCtrl2.d5b_2 = true;
-					gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
-				}
-			}
-			if(this.gameObject.name == ("enemy2"))
-			{
-				if (gameManager.gameMng.strength >= 2)
-				{
-					dialogueController.dialogueCtrl.d6b = true;
-					dialogue2Controller.dialogueCtrl2.d6b_2 = true;
-					gameManager.gameMng.rep++;
-				} else if (gameManager.gameMng.strength < 2)
-				{
-					dialogueController.dialogueCtrl.d7b = true;
-					dialogue2Controller.dialogueCtrl2.d7b_2 = true;
-					gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
-				}
-			}
-			gameManager.gameMng.showEnemy2 = false;
-			gameManager.gameMng.choiceEnemy2 = true;
-		}
-
 	}
 
 	void armorChoice ()
@@ -294,16 +271,19 @@ public class choiceController : MonoBehaviour {
 			this.gameObject.SetActive (false);
 			if (this.gameObject.name.Equals ("g1"))
 			{
+				soundManager.playSound (collectItem);
 				gameManager.gameMng.gift1 = true;
 				gameManager.gameMng.strength++;
 			}
 			if (this.gameObject.name.Equals ("g2"))
 			{
+				soundManager.playSound (collectItem);
 				gameManager.gameMng.gift2 = true;
 				gameManager.gameMng.cunning++;
 			}
 			if (this.gameObject.name.Equals ("g3"))
 			{
+				soundManager.playSound (collectItem);
 				gameManager.gameMng.gift3 = true;
 				gameManager.gameMng.wealth++;
 			}
@@ -388,20 +368,87 @@ public class choiceController : MonoBehaviour {
 		}
 }
 
-	void searchChoice ()
+//	void searchChoice ()
+//	{
+//		if (gameManager.gameMng.choiceSearch == false && this.gameObject.transform.parent.name.Equals ("Search"))
+//		{
+//			this.gameObject.SetActive (false);
+//			if (this.gameObject.name.Equals ("search1"))
+//			{
+//				soundManager.playSound (collectItem);
+//				gameManager.gameMng.search1 = true;
+//			}
+//			if (this.gameObject.name.Equals ("search2")) 
+//			{
+//				soundManager.playSound (collectItem);
+//				gameManager.gameMng.search2 = true;
+//			}
+//			gameManager.gameMng.choiceArmor = true;
+//		}
+//	}
+
+	void enemyEncounter ()
 	{
-		if (gameManager.gameMng.choiceSearch == false && this.gameObject.transform.parent.name.Equals ("Search"))
+		if (gameManager.gameMng.choiceEnemy == false && this.gameObject.transform.parent.name == ("Enemy")) 
 		{
 			this.gameObject.SetActive (false);
-			if (this.gameObject.name.Equals ("search1"))
-			{
-				gameManager.gameMng.search1 = true;
+			if (this.gameObject.name.Equals ("enemy1"))//give gold
+			 {
+				soundManager.playSound (collectItem);
+				gameManager.gameMng.enemy1 = true;
+				dialogueController.dialogueCtrl.d2b = true;
+				dialogue2Controller.dialogueCtrl2.d2b_2 = true;
+				gameManager.gameMng.wealth--;
+				gameManager.gameMng.rep++;
+				//lose one gold
 			}
-			if (this.gameObject.name.Equals ("search2")) 
-			{
-				gameManager.gameMng.search2 = true;
+			if (this.gameObject.name.Equals ("enemy2"))//use your words
+			 {
+				gameManager.gameMng.enemy2 = true;
+				dialogueController.dialogueCtrl.d3b = true;
+				dialogue2Controller.dialogueCtrl2.d3b_2 = true;
+				gameManager.gameMng.showEnemy2 = true;
 			}
-			gameManager.gameMng.choiceArmor = true;
+			gameManager.gameMng.choiceEnemy = true;
+			gameManager.gameMng.showEnemy = false;
+		}
+		if (gameManager.gameMng.enemy2 == true && this.gameObject.transform.parent.name == ("Enemy2")) 
+		{
+			this.gameObject.SetActive (false);
+			if (this.gameObject.name == ("enemy1")) 
+			{
+				if (gameManager.gameMng.cunning >= 2)
+				{
+					dialogueController.dialogueCtrl.d4b = true;
+					dialogue2Controller.dialogueCtrl2.d4b_2 = true;
+					gameManager.gameMng.rep++;
+				}
+				else
+					if (gameManager.gameMng.cunning < 2)
+					{
+						dialogueController.dialogueCtrl.d5b = true;
+						dialogue2Controller.dialogueCtrl2.d5b_2 = true;
+						gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
+					}
+			}
+			if (this.gameObject.name == ("enemy2"))
+			{
+				if (gameManager.gameMng.strength >= 2) 
+				{
+					dialogueController.dialogueCtrl.d6b = true;
+					dialogue2Controller.dialogueCtrl2.d6b_2 = true;
+					gameManager.gameMng.rep++;
+				}
+				else
+					if (gameManager.gameMng.strength < 2)
+					{
+						dialogueController.dialogueCtrl.d7b = true;
+						dialogue2Controller.dialogueCtrl2.d7b_2 = true;
+						gameManager.gameMng.wealth = gameManager.gameMng.wealth - 2;
+					}
+			}
+			gameManager.gameMng.showEnemy2 = false;
+			gameManager.gameMng.choiceEnemy2 = true;
 		}
 	}
 }

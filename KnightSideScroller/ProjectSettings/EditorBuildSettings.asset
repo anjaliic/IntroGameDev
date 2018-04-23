@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/scenes/start_menu.unity
+    guid: 976d96645855edb418be0547dc798b35
+  - enabled: 1
     path: Assets/scenes/game_start.unity
     guid: 6fc4bed2a20de114f9840832a2308c0c
   - enabled: 1
@@ -26,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/monster.unity
     guid: 93dde9a64ac73f24f9808584f79fd311
+  - enabled: 1
+    path: Assets/scenes/end.unity
+    guid: 17a4048617eb46a40b73bbb47dff24c3
+  - enabled: 1
+    path: Assets/scenes/end2.unity
+    guid: 4a38eba02d9c6324bbf7f93f3561a041
   - enabled: 0
     path: Assets/scenes/unused/scene_3_forest.unity
     guid: f544c7d2922dd154ca471fe5a1055d8f

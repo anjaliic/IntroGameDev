@@ -9,6 +9,8 @@ public class areaController : MonoBehaviour {
 
 	public static areaController areaCtrl;
 
+	public AudioClip growl;
+
 //	public bool A1 = true;
 
 	BoxCollider2D areaCollider;
@@ -40,6 +42,14 @@ public class areaController : MonoBehaviour {
 				{
 					Destroy (gameObject);
 				}
+			}
+		}
+
+		if (this.gameObject.transform.parent.name == ("Areas_6"))
+		{
+			if (this.gameObject.name == ("A_1")) 
+			{
+				Destroy (gameObject);
 			}
 		}
 	}
@@ -130,6 +140,11 @@ public class areaController : MonoBehaviour {
 			{
 				dialogue2Controller.dialogueCtrl2.d1b_2 = true;
 			}
+		}
+
+		if (this.gameObject.transform.parent.name == ("Areas_5")) 
+		{
+			soundManager.playSound (growl);
 		}
 	}
 }

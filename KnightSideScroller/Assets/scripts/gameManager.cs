@@ -8,6 +8,11 @@ public class gameManager : MonoBehaviour {
 
 	public Font narrateFont;
 
+	AudioSource audio;
+	AudioClip audioclip;
+	public AudioClip pixelmusic;
+	public AudioClip cavenoise;
+
 	//armor choice
 	public bool choiceArmor;
 
@@ -81,11 +86,27 @@ public class gameManager : MonoBehaviour {
 	public bool enemy1_2;
 	public bool enemy2_2;
 
-
-
 	void Start()
 	{
 		gameMng = this;
+		audio = GetComponent<AudioSource> ();
+		audioclip = GetComponent<AudioClip> ();
+	}
+
+	void Update()
+	{
+//		if (sceneController.sceneCtrl.cavemusic == false)
+//		{
+//			audio.playOnAwake = true;
+//			audio.loop = true;
+//			audio.clip = pixelmusic;
+//		} 
+//		if (sceneController.sceneCtrl.cavemusic == true) 
+//		{
+////			audio.playOnAwake = true;
+////			audio.loop = true;
+//			audio.clip = cavenoise;
+//		}
 	}
 
 	void Awake()

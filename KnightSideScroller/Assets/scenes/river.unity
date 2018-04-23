@@ -1224,7 +1224,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 349930648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.12, y: -0.8, z: 0.17014274}
+  m_LocalPosition: {x: 8.44, y: -0.51, z: 0.17014274}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1239,7 +1239,7 @@ Animator:
   m_GameObject: {fileID: 349930648}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 58c58c521b3ca764aaebbd870cfa05be, type: 2}
+  m_Controller: {fileID: 9100000, guid: e679a5c2a638ada4d8eca81698256385, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1732,6 +1732,53 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &539289284
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -52.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956800414850296, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 198180245968635878, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
+        type: 2}
+      propertyPath: randomSeed
+      value: -817463329
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &676578032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2457,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728226890}
-  m_Text: "There is a path to the caves through the forest or the mountain pass.\r\n"
+  m_Text: 'There is a path to the caves through the forest.
+
+'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2632,7 +2681,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758969883}
-  m_Text: Which shall it be?
+  m_Text: Let's make haste.
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3277,9 +3326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat1: {fileID: 21300000, guid: d8630801c88a960498e870a176cffdc8, type: 3}
-  stat2: {fileID: 21300000, guid: af3b5d73845cb694d8acc678647ba497, type: 3}
-  stat3: {fileID: 21300000, guid: f1a890d63cc07bc4cba7a58e7e325dce, type: 3}
-  stat4: {fileID: 0}
+  stat2: {fileID: 21300000, guid: f1a890d63cc07bc4cba7a58e7e325dce, type: 3}
+  stat3: {fileID: 21300000, guid: dcdfeb0c9fdb90b45a0fc1c8623f6eec, type: 3}
+  stat4: {fileID: 21300000, guid: 4b9df390839f2314cb1258ce45fd1ac6, type: 3}
   statMax: {fileID: 21300000, guid: 4b9df390839f2314cb1258ce45fd1ac6, type: 3}
   statRend: {fileID: 0}
   statT: {fileID: 0}
@@ -4727,7 +4776,7 @@ MonoBehaviour:
   playerarmor2: {fileID: 21300000, guid: 2cab3a658c523be42bd346505e563bf0, type: 3}
   spriteRend: {fileID: 0}
   jumpSpeed: 15
-  playerSpeed: 25
+  playerSpeed: 30
   isWalking: 0
   isFalling: 0
   groundParticleSystem: {fileID: 1621192103914500, guid: a9fcca4e4c4554e4c86e9b73d4e7ed50,
@@ -6392,7 +6441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1710866048
 Transform:
   m_ObjectHideFlags: 0
@@ -6713,6 +6762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &1799075748
 BoxCollider2D:
@@ -7323,6 +7373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4ac46d6dd0c4b4ea581f8eafe2efdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growl: {fileID: 0}
   A3_2: 0
 --- !u!61 &2144434092
 BoxCollider2D:
